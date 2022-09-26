@@ -11,4 +11,9 @@ jobs:
          - image: cimg/node:18.9.1
     steps:
       - checkout
-      - run: node --version
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Run tests in headless mode
+          command: npm test
