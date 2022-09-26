@@ -16,4 +16,4 @@ jobs:
           command: npm install
       - run:
           name: Run tests in headless mode
-          command: npm test
+          command: npm run test
