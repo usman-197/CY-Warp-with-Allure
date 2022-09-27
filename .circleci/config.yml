@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run:
           name: Install xvfb dependency.
-          command: npm i @cypress/xvfb
+          command: apt install xvfb
       - run:
           name: Install dependencies
           command: npm install
