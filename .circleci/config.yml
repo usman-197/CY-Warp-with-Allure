@@ -15,6 +15,9 @@ jobs:
           name: Install xvfb dependency.
           command: sudo apt install xvfb
       - run:
+          name: Install libnss3 dependency.
+          command: sudo apt install libnss3
+      - run:
           name: Install dependencies
           command: npm install
       - run:
