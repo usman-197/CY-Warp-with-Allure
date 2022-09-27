@@ -12,12 +12,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update APT
-          command: |
-            sudo apt-get autoremove
-            sudo apt-get clean
-            sudo apt-get autoclean
-            sudo apt-get update
+          name: Install xvfb dependency.
+          command: npm i @cypress/xvfb
       - run:
           name: Install dependencies
           command: npm install
