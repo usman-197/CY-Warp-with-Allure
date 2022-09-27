@@ -19,13 +19,6 @@ jobs:
             sudo apt-get autoclean
             sudo apt-get update
       - run:
-          name: Atom Prerequisites
-          command: sudo apt-get --assume-yes --quiet --no-install-suggests --no-install-recommends install sudo xvfb libxss1 libasound2
-      - run:
-          name: Create VFB for Atom to run in
-          command: /usr/bin/Xvfb $DISPLAY -ac -screen 0 1280x1024x16
-          background: true
-      - run:
           name: Install dependencies
           command: npm install
       - run:
