@@ -11,6 +11,16 @@ jobs:
       - image: cimg/node:18.9.1
     steps:
       - checkout
+       - run:
+          name: Update APT
+          command: |
+            sudo apt-get autoremove
+            sudo apt-get clean
+            sudo apt-get autoclean
+            sudo apt-get update
+      - run:
+          name: Atom Prerequisites
+          command: sudo apt-get --assume-yes --quiet --no-install-suggests --no-install-recommends install sudo xvfb libxss1 libasound2
       - run:
           name: Install dependencies
           command: npm install
