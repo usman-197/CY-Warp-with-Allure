@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run:
           name: Install xvfb dependency.
-          command: apt install xvfb
+          command: sudo apt install xvfb
       - run:
           name: Install dependencies
           command: npm install
