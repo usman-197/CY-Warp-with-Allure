@@ -26,9 +26,6 @@ jobs:
           command: /usr/bin/Xvfb $DISPLAY -ac -screen 0 1280x1024x16
           background: true
       - run:
-          name: Atom test
-          command: ./build-package.sh
-      - run:
           name: Install dependencies
           command: npm install
       - run:
