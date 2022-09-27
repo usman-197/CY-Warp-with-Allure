@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress run --env allure=true",
+    "cy:run": "cypress run --env allure=true --headless",
     "allure-report": "allure generate allure-results --clean -o allure-report",
     "test": "npm run cy:run || npm run posttest",
     "posttest": "npm run allure-report"
