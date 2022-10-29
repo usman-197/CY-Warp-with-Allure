@@ -6,8 +6,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2.5.0
-      - name: npm install
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
         with:
-          node-version: 14
-      - run: npm ci
-      - run: npm test
+          node-version: '14.x'
+      - name: npm install
+        run: npm ci
