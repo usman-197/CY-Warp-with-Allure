@@ -1,8 +1,14 @@
-name: Every push in main
-on: [push]
+name: CI to execute Analog WARP Cypess end to end automated tests on every push in main branch. 
+on: 
+  push:
+    branches:
+      - main
 jobs:
   warp-e2e-run:
-    runs-on: macos-latest
+    runs-on: $ {{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
     steps:
       - name: checkout
         uses: actions/checkout@v2.5.0
