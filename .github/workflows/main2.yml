@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   warp-e2e-run:
-    runs-on: $ {{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macos-latest]
