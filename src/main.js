@@ -2,6 +2,7 @@
 require('dotenv').config()
 const nodemailer = require("nodemailer");
 
+//mail setup
 (async function run() {
     console.log('test');
 
