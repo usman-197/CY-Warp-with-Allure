@@ -1,13 +1,22 @@
-name: Every push in main
-on: [push]
+name: CI to execute Analog WARP Cypess end to end automated tests on every day at 1pm (Cron type). 
+on: 
+  schedule:
+    - cron: "1 8 * * *"
 jobs:
   warp-e2e-run:
-    runs-on: macos-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
     steps:
       - name: checkout
         uses: actions/checkout@v2.5.0
-      - name: npm install
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
         with:
-          node-version: 14
-      - run: npm ci
-      - run: npm test
+          node-version: '14.x'
+      - name: npm install
+        run: npm ci
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
+      
