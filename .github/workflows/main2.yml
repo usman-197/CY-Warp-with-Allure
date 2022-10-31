@@ -1,7 +1,8 @@
 name: CI to execute Analog WARP Cypess end to end automated tests on every day at 1pm (Cron type). 
-on: 
-  schedule:
-    - cron: "1 8 * * *"
+on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
   
 env:
