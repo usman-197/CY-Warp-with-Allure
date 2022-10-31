@@ -28,5 +28,6 @@ jobs:
         run: npm ci
       - name: Cypress.io
         uses: cypress-io/github-action@v4.2.0  
-      - run: node src/main.js
+      - name: Run Mailer
+        run: node src/main.js
       
