@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-  
 env:
   MAIL_USER_EMAIL: ${{ secrets.MAIL_USER_EMAIL }}
   MAIL_USER_PASS: ${{ secrets.MAIL_USER_PASS }}
