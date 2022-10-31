@@ -2,6 +2,14 @@ name: CI to execute Analog WARP Cypess end to end automated tests on every day a
 on: 
   schedule:
     - cron: "1 8 * * *"
+  workflow_dispatch:
+  
+env:
+  MAIL_USER_EMAIL: ${{ secrets.MAIL_USER_EMAIL }}
+  MAIL_USER_PASS: ${{ secrets.MAIL_USER_PASS }}
+  USER_FROM_EMAIL: ${{ secrets.USER_FROM_EMAIL }}
+  USER_TO_EMAIL: ${{ secrets.USER_TO_EMAIL }}
+    
 jobs:
   warp-e2e-run:
     runs-on: ${{ matrix.os }}
