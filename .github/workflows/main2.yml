@@ -1,8 +1,7 @@
 name: CI to execute Analog WARP Cypess end to end automated tests on every day at 1pm (Cron type). 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "1 8 * * *"
 env:
   MAIL_USER_EMAIL: ${{ secrets.MAIL_USER_EMAIL }}
   MAIL_USER_PASS: ${{ secrets.MAIL_USER_PASS }}
