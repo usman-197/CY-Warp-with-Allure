@@ -1,7 +1,7 @@
-name: CI to execute Analog WARP Cypess end to end automated tests on every push in main branch. 
+name: CI to execute Analog WARP Cypess end to end automated tests on every day at 1pm (Cron type). 
 on: 
   schedule:
-    - cron: "35 5 * * *"
+    - cron: "1 8 * * *"
 jobs:
   warp-e2e-run:
     runs-on: ${{ matrix.os }}
