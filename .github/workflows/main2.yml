@@ -14,7 +14,6 @@ env:
 jobs:
   warp-e2e-run:
     runs-on: ${{ matrix.os }}
-    container: cypress/browsers:node12.18.3-chrome87-ff82
     strategy:
       matrix:
         os: [macos-latest]
