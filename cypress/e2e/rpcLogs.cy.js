@@ -29,5 +29,6 @@ describe('Rpc Logs.', ()=>{
     })
     after(()=>{
         cy.log('Rpc Logs Test Finished');
+        cy.end();
     })
 })

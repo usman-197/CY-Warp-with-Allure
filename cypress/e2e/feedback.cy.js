@@ -34,6 +34,7 @@ describe('Analog WARP dApp Feedback form.', ()=>{
         FeedbackFormObject.submitFinalForm();
     })
     after(()=>{
-        console.log("Feedback Form test is completed.")
+        console.log("Feedback Form test is completed.");
+        cy.end();
     })
 })

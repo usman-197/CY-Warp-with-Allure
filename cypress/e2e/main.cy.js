@@ -199,7 +199,8 @@ describe('All components testcases.', ()=>{
     })
     //After Block
     after(()=>{
-        cy.log('End of all components testcases.')
+        cy.log('End of all components testcases.');
+        cy.end();
     })
 })
 //test

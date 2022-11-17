@@ -22,6 +22,7 @@ describe('Analog WARP dApp Support page.', ()=>{
         SupportPageObject.hereLink();
     })
     after(()=>{
-        SupportPageObject.navigator('https://staging.warp.analog.one/');
+        // SupportPageObject.navigator('https://staging.warp.analog.one/').end();
+        cy.end();
     })
 })
